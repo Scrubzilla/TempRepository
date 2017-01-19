@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<catalog xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog" prefer="system">
+    <system systemId="http://localhost:8080/JspRPGBankApp/JspRPGWebService?WSDL" uri="src/conf/xml-resources/web-service-references/JspRPGWebService/wsdl/localhost_8080/JspRPGBankApp/JspRPGWebService.wsdl"/>
+    <system systemId="http://localhost:8080/JspRPGBankApp/JspRPGWebService?xsd=1" uri="src/conf/xml-resources/web-service-references/JspRPGWebService/wsdl/localhost_8080/JspRPGBankApp/JspRPGWebService.xsd_1.xsd"/>
+    <system systemId="http://localhost:8080/JspRPT_BankService/BankService?WSDL" uri="src/conf/xml-resources/web-service-references/BankService/wsdl/localhost_8080/JspRPT_BankService/BankService.wsdl"/>
+    <system systemId="http://localhost:8080/JspRPT_BankService/BankService?xsd=1" uri="src/conf/xml-resources/web-service-references/BankService/wsdl/localhost_8080/JspRPT_BankService/BankService.xsd_1.xsd"/>
+</catalog>
