@@ -6,6 +6,7 @@
 package WS;
 
 import Helpers.AccountHelper;
+import Helpers.AdminHelper;
 import Helpers.CharacterHelper;
 import Pojo.MailHandler;
 import javax.jws.WebService;
@@ -42,8 +43,12 @@ public class ApplicationWebService {
     public String addAccount(@WebParam(name = "username") String username, @WebParam(name = "password") String password, @WebParam(name = "eMail") String eMail, @WebParam(name = "securityQ") String securityQ, @WebParam(name = "securityQans") String securityQans) {
         AccountHelper accHelp = new AccountHelper();
 
-        if (accHelp.checkUsername(username).equals("1") || accHelp.checkEmail(eMail).equals("1")) {
-            return "The email or the username is already in user";
+        if (accHelp.checkUsername(username).equals("1") && accHelp.checkEmail(eMail).equals("1")) {
+            return "The email or the username is already in use or not valid!";
+        }else if (accHelp.checkUsername(username).equals("1") && accHelp.checkEmail(eMail).equals("0")) {
+            return "The username is either already in use or not valid!";
+        }else if (accHelp.checkUsername(username).equals("0") && accHelp.checkEmail(eMail).equals("1")) {
+            return "The email is not valid or already in use!";
         }
 
         String response = accHelp.createAccount(eMail, username, password, securityQ, securityQans);
@@ -186,5 +191,18 @@ public class ApplicationWebService {
         String response = accHelp.updateRole(username, role);
         return response;
     }
+
+    /**
+     * Web service operation
+     */
+    @WebMethod(operationName = "statsGetAccountsCreated")
+    public Integer statsGetAccountsCreated() {
+        AdminHelper adHelp = new AdminHelper();
+        int accsCreated = adHelp.getNumberOfAccounts();
+        //TODO write your implementation code here:
+        return accsCreated;
+    }
+    
+    
 
 }

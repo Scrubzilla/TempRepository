@@ -34,7 +34,7 @@ public class MailHandler {
     private boolean mailSender(String recipient, String emailMessage, String emailSubject) {
         try {
             String username = "scruburuzilla@gmail.com";
-            String password = "Lila_bil123";
+            String password = "Orange_bil123";
 
             Properties props = new Properties();
 
