@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Jan 8, 2017 5:32:40 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="jsrpg.CharacterHasSpells" table="character_has_spells" catalog="rpgjsp" optimistic-lock="version">
+        <id name="id" type="int">
+            <column name="Id" />
+            <generator class="assigned" />
+        </id>
+        <property name="spellId" type="java.lang.Integer">
+            <column name="Spell_Id" />
+        </property>
+        <property name="charId" type="java.lang.Integer">
+            <column name="Char_Id" />
+        </property>
+    </class>
+</hibernate-mapping>

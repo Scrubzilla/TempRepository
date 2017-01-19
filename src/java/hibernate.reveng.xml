@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-reverse-engineering PUBLIC "-//Hibernate/Hibernate Reverse Engineering DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-reverse-engineering-3.0.dtd">
+<hibernate-reverse-engineering>
+  <schema-selection match-catalog="rpgjsp"/>
+  <table-filter match-name="items"/>
+  <table-filter match-name="zone"/>
+  <table-filter match-name="character_has_spells"/>
+  <table-filter match-name="creature"/>
+  <table-filter match-name="account"/>
+  <table-filter match-name="character_statistics"/>
+  <table-filter match-name="levels"/>
+  <table-filter match-name="spells"/>
+  <table-filter match-name="equipment"/>
+  <table-filter match-name="character_has_equipment"/>
+  <table-filter match-name="character_has_items"/>
+  <table-filter match-name="character"/>
+  <table-filter match-name="area"/>
+</hibernate-reverse-engineering>

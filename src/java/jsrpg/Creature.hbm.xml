@@ -1,0 +1,72 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Jan 8, 2017 5:32:40 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="jsrpg.Creature" table="creature" catalog="rpgjsp" optimistic-lock="version">
+        <id name="id" type="int">
+            <column name="id" />
+            <generator class="assigned" />
+        </id>
+        <property name="name" type="string">
+            <column name="name" length="45" />
+        </property>
+        <property name="type" type="string">
+            <column name="type" length="45" />
+        </property>
+        <property name="strength" type="java.lang.Integer">
+            <column name="strength" />
+        </property>
+        <property name="dexterity" type="java.lang.Integer">
+            <column name="dexterity" />
+        </property>
+        <property name="vitality" type="java.lang.Integer">
+            <column name="vitality" />
+        </property>
+        <property name="intelligence" type="java.lang.Integer">
+            <column name="intelligence" />
+        </property>
+        <property name="wisdom" type="java.lang.Integer">
+            <column name="wisdom" />
+        </property>
+        <property name="charisma" type="java.lang.Integer">
+            <column name="charisma" />
+        </property>
+        <property name="attack" type="java.lang.Integer">
+            <column name="attack" />
+        </property>
+        <property name="armor" type="java.lang.Integer">
+            <column name="armor" />
+        </property>
+        <property name="refire" type="java.lang.Integer">
+            <column name="refire" />
+        </property>
+        <property name="resice" type="java.lang.Integer">
+            <column name="resice" />
+        </property>
+        <property name="ressarc" type="java.lang.Integer">
+            <column name="ressarc" />
+        </property>
+        <property name="reslight" type="java.lang.Integer">
+            <column name="reslight" />
+        </property>
+        <property name="resdark" type="java.lang.Integer">
+            <column name="resdark" />
+        </property>
+        <property name="comment" type="string">
+            <column name="comment" length="500" />
+        </property>
+        <property name="itemDropId" type="java.lang.Integer">
+            <column name="item_drop_id" />
+        </property>
+        <property name="itemDroprate" type="java.lang.Integer">
+            <column name="item_droprate" />
+        </property>
+        <property name="equipDropId" type="java.lang.Integer">
+            <column name="equip_drop_id" />
+        </property>
+        <property name="equipDroprate" type="java.lang.Integer">
+            <column name="equip_droprate" />
+        </property>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Jan 8, 2017 5:32:40 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="jsrpg.CharacterHasItems" table="character_has_items" catalog="rpgjsp" optimistic-lock="version">
+        <id name="id" type="int">
+            <column name="Id" />
+            <generator class="assigned" />
+        </id>
+        <property name="charId" type="java.lang.Integer">
+            <column name="Char_Id" />
+        </property>
+        <property name="itemId" type="java.lang.Integer">
+            <column name="Item_Id" />
+        </property>
+        <property name="amount" type="java.lang.Integer">
+            <column name="amount" />
+        </property>
+        <property name="characterHasItemscol" type="string">
+            <column name="Character_has_Itemscol" length="45" />
+        </property>
+    </class>
+</hibernate-mapping>

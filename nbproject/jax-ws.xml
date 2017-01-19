@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jax-ws xmlns="http://www.netbeans.org/ns/jax-ws/1">
+  <services>
+    <service name="BattleHandlerBean">
+      <implementation-class>WS.BattleHandlerBean</implementation-class>
+    </service>
+    <service name="ApplicationWebService">
+      <implementation-class>WS.ApplicationWebService</implementation-class>
+    </service>
+    <service name="ZoneHandlerBean">
+      <implementation-class>WS.ZoneHandlerBean</implementation-class>
+    </service>
+    <service name="PvPHandlerBean">
+      <implementation-class>WS.PvPHandlerBean</implementation-class>
+    </service>
+  </services>
+  <clients/>
+</jax-ws>

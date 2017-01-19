@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Jan 8, 2017 5:32:40 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="jsrpg.Account" table="account" catalog="rpgjsp" optimistic-lock="version">
+        <id name="id" type="java.lang.Integer">
+            <column name="id" />
+            <generator class="identity" />
+        </id>
+        <property name="username" type="string">
+            <column name="username" length="20" not-null="true" />
+        </property>
+        <property name="password" type="string">
+            <column name="Password" length="45" not-null="true" />
+        </property>
+        <property name="email" type="string">
+            <column name="email" length="90" not-null="true" />
+        </property>
+        <property name="role" type="int">
+            <column name="role" not-null="true" />
+        </property>
+        <property name="securityquestion" type="string">
+            <column name="securityquestion" length="150" not-null="true" />
+        </property>
+        <property name="securityquestionans" type="string">
+            <column name="securityquestionans" length="45" not-null="true" />
+        </property>
+        <set name="characters" table="character" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="Account_id" not-null="true" />
+            </key>
+            <one-to-many class="jsrpg.Character" />
+        </set>
+    </class>
+</hibernate-mapping>

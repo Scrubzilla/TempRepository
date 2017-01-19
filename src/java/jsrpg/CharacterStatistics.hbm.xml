@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Jan 8, 2017 5:32:40 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="jsrpg.CharacterStatistics" table="character_statistics" catalog="rpgjsp" optimistic-lock="version">
+        <id name="charId" type="java.lang.Integer">
+            <column name="charId" />
+            <generator class="identity" />
+        </id>
+        <property name="playtime" type="java.lang.Integer">
+            <column name="playtime" />
+        </property>
+        <property name="moneyspent" type="java.lang.Integer">
+            <column name="moneyspent" />
+        </property>
+        <property name="deaths" type="java.lang.Integer">
+            <column name="deaths" />
+        </property>
+        <property name="slainmobs" type="java.lang.Integer">
+            <column name="slainmobs" />
+        </property>
+        <property name="duelswon" type="java.lang.Integer">
+            <column name="duelswon" />
+        </property>
+        <property name="duelslost" type="java.lang.Integer">
+            <column name="duelslost" />
+        </property>
+        <property name="areasdiscov" type="java.lang.Integer">
+            <column name="areasdiscov" />
+        </property>
+        <property name="comment" type="string">
+            <column name="comment" length="500" />
+        </property>
+    </class>
+</hibernate-mapping>

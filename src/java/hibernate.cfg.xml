@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC "-//Hibernate/Hibernate Configuration DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+  <session-factory>
+    <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
+    <property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
+    <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/rpgjsp</property>
+    <property name="hibernate.connection.username">root</property>
+    <property name="hibernate.connection.password">root</property>
+    <property name="hibernate.current_session_context_class">thread</property>
+    <property name="hibernate.enable_lazy_load_no_trans">true</property>
+    <property name="hibernate.c3p0.timeout">300</property>
+    <mapping resource="jsrpg/Items.hbm.xml"/>
+    <mapping resource="jsrpg/Spells.hbm.xml"/>
+    <mapping resource="jsrpg/Creature.hbm.xml"/>
+    <mapping resource="jsrpg/CharacterHasSpells.hbm.xml"/>
+    <mapping resource="jsrpg/CharacterStatistics.hbm.xml"/>
+    <mapping resource="jsrpg/Zone.hbm.xml"/>
+    <mapping resource="jsrpg/Character.hbm.xml"/>
+    <mapping resource="jsrpg/Levels.hbm.xml"/>
+    <mapping resource="jsrpg/CharacterHasEquipment.hbm.xml"/>
+    <mapping resource="jsrpg/Account.hbm.xml"/>
+    <mapping resource="jsrpg/Area.hbm.xml"/>
+    <mapping resource="jsrpg/Equipment.hbm.xml"/>
+    <mapping resource="jsrpg/CharacterHasItems.hbm.xml"/>
+    
+    
+  </session-factory>
+</hibernate-configuration>

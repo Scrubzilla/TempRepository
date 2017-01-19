@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Jan 8, 2017 5:32:40 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="jsrpg.Levels" table="levels" catalog="rpgjsp" optimistic-lock="version">
+        <id name="level" type="string">
+            <column name="level" length="150" />
+            <generator class="assigned" />
+        </id>
+        <property name="expneeded" type="java.lang.Integer">
+            <column name="expneeded" />
+        </property>
+        <property name="comment" type="string">
+            <column name="comment" length="500" />
+        </property>
+    </class>
+</hibernate-mapping>

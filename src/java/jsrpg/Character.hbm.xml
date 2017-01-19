@@ -1,0 +1,100 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Jan 8, 2017 5:32:40 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="jsrpg.Character" table="character" catalog="rpgjsp" optimistic-lock="version">
+        <composite-id name="id" class="jsrpg.CharacterId">
+            <key-property name="id" type="int">
+                <column name="id" />
+            </key-property>
+            <key-property name="accountId" type="int">
+                <column name="Account_id" />
+            </key-property>
+        </composite-id>
+        <many-to-one name="account" class="jsrpg.Account" update="false" insert="false" fetch="select">
+            <column name="Account_id" not-null="true" />
+        </many-to-one>
+        <property name="name" type="string">
+            <column name="name" length="45" not-null="true" />
+        </property>
+        <property name="portrait" type="int">
+            <column name="portrait" not-null="true" />
+        </property>
+        <property name="lastloggedin" type="date">
+            <column name="lastloggedin" length="10" />
+        </property>
+        <property name="level" type="java.lang.Integer">
+            <column name="level" />
+        </property>
+        <property name="xp" type="java.lang.Integer">
+            <column name="xp" />
+        </property>
+        <property name="location" type="java.lang.Integer">
+            <column name="location" />
+        </property>
+        <property name="isonline" type="java.lang.Boolean">
+            <column name="isonline" />
+        </property>
+        <property name="money" type="java.lang.Integer">
+            <column name="money" />
+        </property>
+        <property name="strength" type="java.lang.Integer">
+            <column name="strength" />
+        </property>
+        <property name="dexterity" type="java.lang.Integer">
+            <column name="dexterity" />
+        </property>
+        <property name="vitality" type="java.lang.Integer">
+            <column name="vitality" />
+        </property>
+        <property name="intelligence" type="java.lang.Integer">
+            <column name="intelligence" />
+        </property>
+        <property name="wisdom" type="java.lang.Integer">
+            <column name="wisdom" />
+        </property>
+        <property name="charisma" type="java.lang.Integer">
+            <column name="charisma" />
+        </property>
+        <property name="equiphelm" type="java.lang.Integer">
+            <column name="equiphelm" />
+        </property>
+        <property name="equiparmor" type="java.lang.Integer">
+            <column name="equiparmor" />
+        </property>
+        <property name="equipweapon" type="java.lang.Integer">
+            <column name="equipweapon" />
+        </property>
+        <property name="equipoffhand" type="java.lang.Integer">
+            <column name="equipoffhand" />
+        </property>
+        <property name="struse" type="java.lang.Integer">
+            <column name="struse" />
+        </property>
+        <property name="dexuse" type="java.lang.Integer">
+            <column name="dexuse" />
+        </property>
+        <property name="fureuse" type="java.lang.Integer">
+            <column name="fureuse" />
+        </property>
+        <property name="iceuse" type="java.lang.Integer">
+            <column name="iceuse" />
+        </property>
+        <property name="arcaneuse" type="java.lang.Integer">
+            <column name="arcaneuse" />
+        </property>
+        <property name="lightuse" type="java.lang.Integer">
+            <column name="lightuse" />
+        </property>
+        <property name="darkuse" type="java.lang.Integer">
+            <column name="darkuse" />
+        </property>
+        <property name="magoffuse" type="java.lang.Integer">
+            <column name="magoffuse" />
+        </property>
+        <property name="magdefuse" type="java.lang.Integer">
+            <column name="magdefuse" />
+        </property>
+    </class>
+</hibernate-mapping>
